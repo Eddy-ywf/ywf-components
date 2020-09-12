@@ -4,7 +4,6 @@
   "description": "ywf-components",
   "author": "Eddy Nguyen",
   "license": "MIT",
-  "repository": "https://github.com/Eddy-ywf",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.js",
