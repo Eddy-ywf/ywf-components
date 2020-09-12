@@ -1,0 +1,389 @@
+.form-control {
+  background-color: rgb(243, 243, 246);
+  color: #2D3142;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 24px;
+  font-size: 16px;
+  height: auto;
+
+  &::placeholder {
+    color: rgba(45, 49, 66, 0.397);
+  }
+
+  &:focus {
+    background-color: rgb(250, 250, 250);
+  }
+}
+
+label {
+  font-size: 14px;
+  margin-bottom: 10px;
+  font-weight: 500;
+
+  +.custom-checkbox {
+    margin-top: 5px;
+  }
+}
+
+.yoodoo-is-valid {
+  border: solid 0.5px;
+  border-color: #28a745;
+  padding-right: calc(1.5em + 0.75rem);
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right calc(0.375em + 0.1875rem) center;
+  background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+}
+
+.valid-feedback,
+.is-valid~.valid-tooltip {
+  display: block;
+}
+
+.yoodoo-is-invalid {
+  border: solid 0.5px;
+  border-color: #dc3545;
+  padding-right: calc(1.5em + 0.75rem);
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23dc3545' viewBox='0 0 12 12'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 24px center;
+  background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+}
+
+.invalid-feedback,
+.is-invalid~.invalid-tooltip {
+  display: block;
+}
+
+/*======= Search Box =======*/
+.yoodoo-search-box {
+  position: relative;
+  display: inline-block;
+
+  input {
+    border: none;
+    height: 44px;
+    background-color: #f0f3f8;
+    border: 1px solid rgba(0, 127, 201, 0.14);
+    padding: 8px 72px 8px 15px;
+    font-size: 14px;
+    border-radius: 6px;
+    transition: box-shadow .2s;
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .25);
+    }
+
+    &::placeholder {
+      color: #9C9EB9;
+    }
+  }
+
+  button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    color: #007EC9;
+    background: transparent;
+    border: none;
+    font-size: 19px;
+
+    &:focus {
+      outline: none;
+      color: rgb(0, 99, 156);
+    }
+  }
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+
+  .row-yoodoo-form {
+    margin-right: -10px;
+    margin-left: -10px;
+    margin-bottom: -20px;
+
+    >div {
+      padding-right: 10px;
+      padding-left: 10px;
+      padding-bottom: 20px;
+    }
+  }
+
+  .row-yoodoo-mp-input {
+    margin-right: -5px;
+    margin-left: -5px;
+    margin-bottom: -10px;
+
+    >div {
+      padding-right: 5px;
+      padding-left: 5px;
+      padding-bottom: 10px;
+    }
+  }
+}
+
+/* Radio buttons */
+.custom-radio .custom-control-input:checked~.custom-control-label::after {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%232D3142'/%3E%3C/svg%3E");
+}
+
+.custom-control-input:checked~.custom-control-label::before {
+  border: 2px solid #2D3142;
+}
+
+.custom-radio {
+  .custom-control-input {
+    &:checked {
+      &~.custom-control-label::before {
+        background-color: #fff;
+      }
+    }
+
+    &:disabled {
+      &~.custom-control-label {
+        cursor: not-allowed;
+      }
+    }
+  }
+}
+
+.custom-control-label {
+  display: inline;
+  line-height: 24px;
+  font-size: 16px;
+  font-weight: normal;
+  color: #2D3142;
+  cursor: pointer;
+
+  &::before {
+    background-color: #fff;
+    border: 2px solid #9C9EB9;
+    width: 24px;
+    height: 24px;
+    top: -2px;
+    left: calc(-1.5rem - 20px);
+  }
+
+  &::after {
+    width: 24px;
+    height: 24px;
+    top: -2px;
+    left: calc(-1.5rem - 20px);
+    // top: 3px;
+    // left: 0;
+  }
+}
+
+.custom-checkbox {
+  .custom-control-input:checked~.custom-control-label::before {
+    background-color: #fff;
+  }
+
+  .custom-control-label::before {
+    border-radius: 5px;
+    border-color: #cccccc;
+  }
+
+  .custom-control-input:checked~.custom-control-label {
+    &::before {
+      border-color: #cccccc;
+    }
+
+    &::after {
+      // background-image: url(../image/icon/check.svg);
+    }
+  }
+}
+
+.custom-control-label::after {
+  background-size: 12px;
+}
+
+.custom-checkbox .custom-control-label {
+  font-size: 11px;
+  color: #666666;
+}
+
+.custom-control.custom-checkbox {
+  // margin-top: 5px;
+}
+
+.custom-control {
+  padding-left: calc(1.5rem + 20px);
+  margin-bottom: 16px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/* Checkbox */
+.custom-checkbox {
+
+  .custom-control-label {
+    display: inline;
+    line-height: 24px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #2d3142;
+    cursor: pointer;
+
+    &:before {
+      border-color: #9C9EB9;
+    }
+  }
+
+  .custom-control-input {
+    &:checked {
+      &~.custom-control-label {
+        &:before {
+          background-color: #007EC9;
+          border-color: #007EC9;
+        }
+
+        &:after {
+          background-size: 16px;
+          background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='12' fill='none' viewBox='0 0 16 12' %3E%3Cpath fill='none' d='M1 5.54545L6.6 11L15 1' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+        }
+      }
+    }
+
+    &:disabled {
+      &~.custom-control-label {
+        cursor: not-allowed;
+      }
+    }
+  }
+}
+
+/* Date Input Mask */
+.date-input {
+  position: relative;
+
+  .btn-cal {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 20px;
+    margin: auto 0;
+    height: 20px;
+    width: 18px;
+    padding: 15px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='18' height='20' viewBox='0 0 18 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15 2H14V1C14 0.734784 13.8946 0.48043 13.7071 0.292893C13.5196 0.105357 13.2652 0 13 0C12.7348 0 12.4804 0.105357 12.2929 0.292893C12.1054 0.48043 12 0.734784 12 1V2H6V1C6 0.734784 5.89464 0.48043 5.70711 0.292893C5.51957 0.105357 5.26522 0 5 0C4.73478 0 4.48043 0.105357 4.29289 0.292893C4.10536 0.48043 4 0.734784 4 1V2H3C2.20435 2 1.44129 2.31607 0.87868 2.87868C0.316071 3.44129 0 4.20435 0 5V17C0 17.7956 0.316071 18.5587 0.87868 19.1213C1.44129 19.6839 2.20435 20 3 20H15C15.7956 20 16.5587 19.6839 17.1213 19.1213C17.6839 18.5587 18 17.7956 18 17V5C18 4.20435 17.6839 3.44129 17.1213 2.87868C16.5587 2.31607 15.7956 2 15 2ZM3 4H4V5C4 5.26522 4.10536 5.51957 4.29289 5.70711C4.48043 5.89464 4.73478 6 5 6C5.26522 6 5.51957 5.89464 5.70711 5.70711C5.89464 5.51957 6 5.26522 6 5V4H12V5C12 5.26522 12.1054 5.51957 12.2929 5.70711C12.4804 5.89464 12.7348 6 13 6C13.2652 6 13.5196 5.89464 13.7071 5.70711C13.8946 5.51957 14 5.26522 14 5V4H15C15.2652 4 15.5196 4.10536 15.7071 4.29289C15.8946 4.48043 16 4.73478 16 5V9H2V5C2 4.73478 2.10536 4.48043 2.29289 4.29289C2.48043 4.10536 2.73478 4 3 4ZM15 18H3C2.73478 18 2.48043 17.8946 2.29289 17.7071C2.10536 17.5196 2 17.2652 2 17V11H16V17C16 17.2652 15.8946 17.5196 15.7071 17.7071C15.5196 17.8946 15.2652 18 15 18Z' fill='%23007EC9'/%3E%3Cpath d='M5 15C5.55228 15 6 14.5523 6 14C6 13.4477 5.55228 13 5 13C4.44772 13 4 13.4477 4 14C4 14.5523 4.44772 15 5 15Z' fill='%23007EC9'/%3E%3Cpath d='M13 13H9C8.73478 13 8.48043 13.1054 8.29289 13.2929C8.10536 13.4804 8 13.7348 8 14C8 14.2652 8.10536 14.5196 8.29289 14.7071C8.48043 14.8946 8.73478 15 9 15H13C13.2652 15 13.5196 14.8946 13.7071 14.7071C13.8946 14.5196 14 14.2652 14 14C14 13.7348 13.8946 13.4804 13.7071 13.2929C13.5196 13.1054 13.2652 13 13 13Z' fill='%23007EC9'/%3E%3C/svg%3E");
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    border-radius: 6px;
+
+    &:focus{
+      outline: none;
+    }
+    &.active, &:hover{
+      background-color: rgba(0,126,199,.15);
+    }
+  }
+}
+
+.date-input-invalid {
+  &:after {
+    display: none;
+  }
+}
+
+/* react-select Customization */
+.yoodoo-select {
+  >div:first-child {
+    background-color: #f3f3f6;
+    border-color: transparent;
+
+    >div:first-child {
+      padding-left: 24px;
+
+      >div {
+        margin-left: 0;
+        color: #2d3142;
+      }
+    }
+
+    >div:nth-child(2) {}
+  }
+}
+
+.react-select-error {
+  >div {
+    border-color: #dc3545 !important;
+
+    >div {
+      >span {
+        background-color: #dc3545;
+      }
+    }
+
+    svg {
+      color: #dc3545;
+    }
+
+    &:hover {
+      border-color: #dc3545;
+    }
+  }
+}
+
+.cal-wrapper {
+  background-color: #fff;
+  padding-top: 10px;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+
+  .react-calendar {
+    max-width: 400px;
+    width: 100%;
+    border-radius: 7px;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .05);
+    border-radius: 7px;
+
+    button {
+      border-radius: 7px;
+      overflow: hidden;
+    }
+
+    .react-calendar__month-view__days {
+      padding: 5px;
+
+      button {
+        flex-basis: calc(14.2857% - 10px) !important;
+        max-width: calc(14.2857% - 10px) !important;
+        margin: 5px;
+        overflow: hidden !important;
+
+        &:focus {
+          box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .25);
+          outline: none;
+        }
+      }
+    }
+
+    .react-calendar__tile--now{
+      background: transparent;
+      border: 1px dashed #007ec9;
+    }
+    .react-calendar__tile--active {
+      &.react-calendar__tile--now{
+        border-color: #FFF;
+      }
+      background: #007ec9;
+      transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    }
+
+    .react-calendar__tile {
+      transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+      padding: .75em 0;
+    }
+  }
+}

@@ -1,0 +1,178 @@
+
+/*-----------------------------------------------------------------------------
+  Yoodoo - Buttons
+-----------------------------------------------------------------------------*/
+.btn{
+  &.btn-block{
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+/*---- Yoodoo Mainstream ----*/
+.btn-yoodoo {
+  background-color: #CCE5F4;
+  color: #007EC9;
+  border: none;
+  padding: 28px 40px;
+  font-size: 16px;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  
+  &:hover {
+    color: #007EC9;
+
+    &:after {
+      left: 70%;
+      opacity: .2;
+    }
+  }
+
+  &:after {
+    transform: scale(1.5);
+    transition: all .4s cubic-bezier(0.860, 0.000, 0.070, 1.000);
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -55%;
+    right: 0;
+    background: linear-gradient(135deg, transparent 50%, #354F88 50%);
+    opacity: .04;
+    // z-index: -1;
+  }
+}
+/*---- Yoodoo Info ----*/
+.btn-yoodoo-info {
+  background-color: #007EC9;
+  color: #FFFFFF;
+  border-radius: 6px;
+  font-size: 14px;
+  padding: 7px 12px;
+  i{
+    font-size: 22px;
+    line-height: 22px;
+  }
+  &:hover {
+    background-color: #FFFFFF;
+    color: #007EC9;
+    border: 1px solid #007EC9;
+    // opacity: .2;
+  }
+}
+
+
+/*---- Yoodoo Secondary ----*/
+.btn-yoodoo-secondary {
+  background-color: #E1E2EA;
+  color: #9C9EB9;
+  padding: 7px 15px;
+  font-size: 16px;
+  border-radius: 6px;
+
+  &:hover {
+    color: #8f909e;
+    background-color: rgb(198, 200, 214);
+  }
+
+  &.active {
+    background-color: #007EC9;
+    color: #FFF;
+  }
+}
+/*---- Yoodoo Secondary ----*/
+.btn-yoodoo-flat{
+  background-color: #F3F3F7;
+  color: #2D3142;
+  font-size: 16px;
+  padding: 7px 10px;
+  border-radius: 6px;
+  &:hover{
+    background-color: rgb(221, 243, 255);
+  }
+}
+/*---- Yoodoo Primary ----*/
+.btn-yoodoo-primary {
+  background: linear-gradient(to right, #007EC9, #354F88);
+  padding: 15px 60px;
+  color: #FFF;
+  border: 1px solid #007EC9;
+  border-radius: 6px;
+  transition: opacity 0.3s ease;
+  &:hover{
+    color: #FFF;
+    opacity: .85;
+  }
+}
+
+/*---- Yoodoo Primary - outline ----*/
+.btn-outline-yoodoo-primary {
+  border: 1px solid #007EC9;
+  color: #007EC9;
+  padding: 15px 60px;
+  border-radius: 6px;
+  background: transparent;
+  position: relative;
+  overflow: hidden;
+  transition: all .3s ease;
+  z-index: 2;
+  &:hover {
+    border: 1px solid #007EC9;
+    color: #FFF;
+    // border: 1px solid linear-gradient(to right, #007EC9, #354F88);
+    &:after{
+      opacity: 1;
+    }
+  }
+
+  &:after {
+    position: absolute;
+    transition: all .3s ease;
+    content: '';
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    background: linear-gradient(to right, #007EC9, #354F88);
+    z-index: -1;
+  }
+}
+
+/*---- Yoodoo button - global ----*/
+
+.btn-sm, .btn-group-sm > .btn {
+  padding: 7px 8px;
+  font-size: 16px;
+  line-height: 1.5;
+  border-radius: 6px;
+}
+.btn{
+  // text-decoration: none;
+  &:disabled{
+    cursor: not-allowed;
+  }
+}
+.btn-group-bottom{
+  height: 100%;
+  margin-top: 30px;
+}
+
+/*---- Language Switcher ----*/
+.language-switcher-group{
+  position: absolute;
+  bottom:20px;
+  left: 0;
+  width: 100%;
+  .btn{
+    border-radius: 0;
+  }
+  >div{
+    .col:first-child{
+      padding-right: 0;
+    }
+    .col:last-child{
+      padding-left: 0;
+    }
+  }
+}

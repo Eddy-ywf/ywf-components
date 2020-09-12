@@ -1,0 +1,173 @@
+.btn-noti {
+  height: 44px;
+  width: 44px;
+  background: transparent;
+  border: none;
+  border-radius: 7px;
+  transition: all .2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    background-color: rgba(0, 126, 199, 0.15);
+  }
+
+  &.active {
+    background-color: rgba(0, 126, 199, 0.15);
+  }
+
+  &:focus {
+    // box-shadow: 0 0 0 0.2rem rgba(0,126,201,.5);
+    outline: none;
+  }
+
+  &.unread {
+    .noti-icon {
+      background-image: url("data:image/svg+xml,%3Csvg width='24' height='26' viewBox='0 0 24 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0)'%3E%3Cpath d='M10.5589 24.3399C10.3464 24.19 10.1599 24.0088 10.005 23.8037H13.9947C13.8398 24.0088 13.6533 24.19 13.4407 24.3399C13.0191 24.6372 12.5158 24.7969 11.9998 24.7969C11.4839 24.7969 10.9806 24.6372 10.5589 24.3399Z' fill='white' stroke='%23007EC9'/%3E%3C/g%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M20.0003 9.9623V14.2976C20.029 16.587 20.6695 18.8272 21.8557 20.7857L22.7751 22.3037H21.0003H3.00033H1.22559L2.14498 20.7857C3.33113 18.8272 3.97171 16.587 4.00033 14.2976V9.30371C4.00033 7.18198 4.84319 5.14715 6.34348 3.64686C7.84377 2.14657 9.8786 1.30371 12.0003 1.30371C12.2622 1.30371 12.5228 1.31655 12.7811 1.34188C12.4413 1.93948 12.2011 2.60115 12.0832 3.30428C12.0556 3.3039 12.028 3.30371 12.0003 3.30371C10.409 3.30371 8.88291 3.93585 7.75769 5.06107C6.63247 6.18629 6.00033 7.71241 6.00033 9.30371V14.3037V14.3158H6.00026C5.97529 16.3897 5.51584 18.4288 4.65886 20.3037H19.3418C18.4848 18.4288 18.0254 16.3897 18.0004 14.3158L18.0003 14.3037H18.0003V10.3037C18.7016 10.3037 19.3748 10.1834 20.0003 9.9623Z' fill='%23007EC9'/%3E%3Ccircle cx='18' cy='4.30371' r='4' fill='%23F94747'/%3E%3Cdefs%3E%3CclipPath id='clip0'%3E%3Crect y='1.30371' width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+    }
+  }
+
+  .noti-icon {
+    width: 24px;
+    height: 26px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='25' viewBox='0 0 24 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0)'%3E%3Cpath d='M10.5589 23.3399C10.3464 23.19 10.1599 23.0088 10.005 22.8037H13.9947C13.8398 23.0088 13.6533 23.19 13.4407 23.3399C13.0191 23.6372 12.5158 23.7969 11.9998 23.7969C11.4839 23.7969 10.9806 23.6372 10.5589 23.3399Z' fill='white' stroke='%23007EC9'/%3E%3C/g%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M6.34348 2.64686C7.84377 1.14657 9.8786 0.303711 12.0003 0.303711C14.1221 0.303711 16.1569 1.14657 17.6572 2.64686C19.1575 4.14715 20.0003 6.18198 20.0003 8.30371V13.2976C20.029 15.587 20.6695 17.8272 21.8557 19.7857L22.7751 21.3037H21.0003H3.00033H1.22559L2.14498 19.7857C3.33113 17.8272 3.97171 15.587 4.00033 13.2976V8.30371C4.00033 6.18198 4.84319 4.14715 6.34348 2.64686ZM12.0003 2.30371C10.409 2.30371 8.88291 2.93585 7.75769 4.06107C6.63247 5.18629 6.00033 6.71241 6.00033 8.30371V13.3037V13.3158H6.00026C5.97529 15.3897 5.51584 17.4288 4.65886 19.3037H19.3418C18.4848 17.4288 18.0254 15.3897 18.0004 13.3158L18.0003 13.3037H18.0003V8.30371C18.0003 6.71241 17.3682 5.18629 16.243 4.06107C15.1178 2.93585 13.5916 2.30371 12.0003 2.30371Z' fill='%23007EC9'/%3E%3Cdefs%3E%3CclipPath id='clip0'%3E%3Crect y='0.303711' width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+  }
+}
+
+
+.noti-container {
+  z-index: 999;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  border-radius: 7px;
+
+  .noti-wrapper {
+    background-color: #FFF;
+    padding: 30px;
+    z-index: 999;
+    width: 360px;
+    max-height: calc(100vh - 118px);
+    overflow-y: auto;
+
+    .noti-title {
+      font-weight: 500;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.noti-list {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style-type: none;
+
+  li:not(:last-child) {
+    margin-bottom: 18px;
+  }
+
+  .noti-list_thumbnail {
+    height: 40px;
+    width: 40px;
+    background-color: rgba(156, 158, 185, 0.3);
+    margin-right: 14px;
+    border-radius: 6px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .noti-list_body {
+    font-size: 14px;
+
+    .noti-list_body-title {
+      margin-bottom: 5px;
+      font-size: 12px;
+      color: #9C9EB9;
+      text-transform: uppercase;
+
+      &.unread {
+        &:before {
+          content: "";
+          width: 6px;
+          height: 6px;
+          display: inline-block;
+          background-color: #007EC9;
+          margin-right: 8px;
+          position: relative;
+          top: -2px;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}
+
+.btn-avatar {
+  height: 36px;
+  width: 36px;
+  background: url(https://cdnb.artstation.com/p/assets/images/images/001/863/575/medium/irakli-nadar-artstation-da.jpg?1453903033);
+  border: none;
+  border-radius: 50%;
+  transition: all .4s cubic-bezier(.86, 0, .07, 1);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 126, 201, .5);
+  }
+
+  &:hover {
+    box-shadow: 0 0 0 3px rgba(0, 126, 201, .5);
+  }
+
+  &.active{
+    box-shadow: 0 0 0 3px rgba(0, 126, 201, .5);
+  }
+}
+
+.avatar-container {
+  z-index: 999;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  border-radius: 7px;
+
+  .avatar-wrapper {
+    background-color: #FFF;
+    padding: 30px;
+    z-index: 999;
+    width: 240px;
+    max-height: 87vh;
+    overflow-y: auto;
+
+    .avatar-wrapper__header {
+      display: flex;
+      justify-content: flex-end;
+
+      .btn-logout {
+        cursor: pointer;
+        height: 24px;
+        width: 24px;
+        background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 6C7.26522 6 7.51957 5.89464 7.70711 5.70711C7.89464 5.51957 8 5.26522 8 5C8 4.73478 7.89464 4.48043 7.70711 4.29289C7.51957 4.10536 7.26522 4 7 4H5C4.73478 4 4.48043 4.10536 4.29289 4.29289C4.10536 4.48043 4 4.73478 4 5V19C4 19.2652 4.10536 19.5196 4.29289 19.7071C4.48043 19.8946 4.73478 20 5 20H7C7.26522 20 7.51957 19.8946 7.70711 19.7071C7.89464 19.5196 8 19.2652 8 19C8 18.7348 7.89464 18.4804 7.70711 18.2929C7.51957 18.1054 7.26522 18 7 18H6V6H7Z' fill='%239C9EB9'/%3E%3Cpath d='M20.82 11.42L18 7.41995C17.8471 7.20436 17.615 7.05809 17.3545 7.01312C17.0941 6.96815 16.8264 7.02813 16.61 7.17995C16.5018 7.25574 16.4098 7.35219 16.3391 7.46376C16.2684 7.57532 16.2206 7.69977 16.1982 7.82994C16.1759 7.9601 16.1796 8.09339 16.2091 8.22212C16.2386 8.35085 16.2933 8.47247 16.37 8.57995L18.09 11H10C9.73478 11 9.48043 11.1053 9.29289 11.2928C9.10536 11.4804 9 11.7347 9 12C9 12.2652 9.10536 12.5195 9.29289 12.7071C9.48043 12.8946 9.73478 13 10 13H18L16.2 15.4C16.1212 15.505 16.0639 15.6246 16.0313 15.7518C15.9987 15.879 15.9915 16.0114 16.01 16.1414C16.0286 16.2714 16.0726 16.3964 16.1395 16.5094C16.2064 16.6224 16.2949 16.7212 16.4 16.7999C16.5731 16.9298 16.7836 17 17 17C17.1552 17 17.3084 16.9638 17.4472 16.8944C17.5861 16.8249 17.7069 16.7241 17.8 16.6L20.8 12.6C20.9281 12.4308 20.999 12.2253 21.0026 12.0132C21.0062 11.8011 20.9423 11.5933 20.82 11.42Z' fill='%239C9EB9'/%3E%3C/svg%3E%0A");
+      }
+    }
+
+    .avatar-wrapper__body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .body__avatar{
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background: url(https://cdnb.artstation.com/p/assets/images/images/001/863/575/medium/irakli-nadar-artstation-da.jpg?1453903033);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.15);
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+/*-----------------------------------------------------------------------------
+  YooDoo - Styles
+-----------------------------------------------------------------------------*/
+
+/*---- Globals ----*/
+
+@import './global/functions';
+@import './global/mixins';
+@import './global/vars';
+@import './global/fonts';
+@import './global/starters';
+@import './global/pre';
+@import './global/widths';
+@import './global/containers';
+@import './global/spacings';
+@import './global/flexbox';
+@import './global/paragraph';
+@import './global/headings';
+
+/*---- Components ----*/
+@import './components/loading';
+@import './components/modal';
+@import './components/button';
+@import './components/card';
+@import './components/form';
+@import './components/main-sidebar';
+@import './components/hr';
+@import './components/page-title';
+@import './components/stepper';
+@import './components/grid';
+@import './components/progress';
+@import './components/popover';
+
+/*---- Icons ---*/
+$fa-font-path: "~font-awesome/fonts";
+@import '~font-awesome/scss/font-awesome.scss';
+
+/*---- Utilities ----*/
+@import './utilities/colors';

@@ -1,0 +1,15 @@
+pre {
+  display: block;
+  background: #dedede;
+  border-radius: 3px;
+  padding: 30px 12px 11px;
+  margin-bottom: 0;
+  position: relative;
+  &:before{
+    content:'Code';
+    position: absolute;
+    color: rgb(185, 185, 185);
+    top:7px;
+    left: 12px;
+  }
+}

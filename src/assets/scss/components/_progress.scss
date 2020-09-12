@@ -1,0 +1,36 @@
+.progress {
+  height: 4px;
+  border-radius: 50px;
+  overflow: visible;
+  width: 100%;
+  background-color: rgba(156,158,185,.5);
+  .progress-bar {
+    background-color: #007ec9;
+    border-radius: 50px;
+    position: relative;
+    overflow: visible;
+
+    .progress-point {
+      width: 22px;
+      height: 22px;
+      position: absolute;
+      border: 2px solid #007ec9;
+      right: -11px;
+      background-color: transparent;
+      border-radius: 50%;
+      &:after{
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background-color: #007ec9;
+        border-radius: 50%;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+      }
+    }
+  }
+}
