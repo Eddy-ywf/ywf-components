@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button } from 'ywf-components'
+import { Button, Input } from 'ywf-components'
 import 'ywf-components/dist/index.css'
 
 const App = () => {
@@ -10,6 +10,9 @@ const App = () => {
       </Button>
 
      <Button color="ywf-primary">Yoodoo Button</Button>
+
+     <Input type="text" placeholder="with a placeholder"/>
+
     </>
 )
 }

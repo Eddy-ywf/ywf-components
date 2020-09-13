@@ -1,10 +1,15 @@
 .form-control {
-  background-color: rgb(243, 243, 246);
-  color: #2D3142;
-  border: none;
-  border-radius: 6px;
+
+  background: #FFFFFF;
+  border: 1px solid #D3D3D3;
+  box-sizing: border-box;
+  border-radius: 5px;
+  color: #D3D3D3;
   padding: 8px 24px;
-  font-size: 16px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 18px;
   height: auto;
 
   &::placeholder {
