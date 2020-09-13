@@ -18,7 +18,7 @@
   border-radius: 10px;
   position: relative;
   overflow: hidden;
-  
+
   &:hover {
     color: #007EC9;
 
@@ -61,7 +61,6 @@
   }
 }
 
-
 /*---- Yoodoo Secondary ----*/
 .btn-yoodoo-secondary {
   background-color: #E1E2EA;
@@ -92,17 +91,18 @@
   }
 }
 /*---- Yoodoo Primary ----*/
-.btn-yoodoo-primary {
-  background: linear-gradient(to right, #007EC9, #354F88);
+.btn-ywf-primary {
+  background: #FF7200;
   padding: 15px 60px;
   color: #FFF;
-  border: 1px solid #007EC9;
+  border: 1px solid #FF7200;
   border-radius: 6px;
   transition: opacity 0.3s ease;
   &:hover{
     color: #FFF;
     opacity: .85;
   }
+  cursor: pointer;
 }
 
 /*---- Yoodoo Primary - outline ----*/
